@@ -10,9 +10,17 @@
   src: url("./assets/fonts/digital-7.ttf");
 }
 
+body {
+  background-color: rgb(255, 235, 220);
+}
+
 div.calculator {
   width: 40rem;
+  height: 100vh;
   position: relative;
+  left: 48.5%;
+  transform: translate(-50%, 0%);
+  /* border: 0.1rem solid black; */
 }
 
 div.calculator h1 {
@@ -21,35 +29,34 @@ div.calculator h1 {
 
 div.calculator-body {
   width: 40rem;
-  height: 40rem;
+  position: relative;
   border-radius: 1rem 1rem 1rem 1rem;
 }
 
 div.input-panel {
-  border-radius: 1rem 1rem 0rem 0rem;
-  /* box-shadow: 0.4rem 0.4rem 0rem 0.3rem black; */
-  margin-left: 1.5rem;
   width: 40rem;
+  border-radius: 1rem 1rem 0rem 0rem;
+  margin-left: 2rem;
+  box-shadow: 0rem 0.1rem 0rem 0rem black;
 }
 
 div.input-panel-box-shadow1 {
-  width: 2rem;
+  width: 2.8rem;
   height: 6.45rem;
   background-color: black;
-  border-radius: 0rem 1rem 0rem 0rem;
+  border-radius: 1.1rem 1rem 0.5rem 0rem;
   position: absolute;
-  top: 25.2%;
-  left: 104.63%;
-  transform: translate(-50%, -50%) skew(0deg, 20deg);
+  top: 9.5%;
+  left: 105%;
+  transform: translate(-50%, -50%) skew(0deg, 25deg);
   z-index: -1;
 }
 
 div.input-panel input {
   height: 4.5rem;
   font-size: 5rem;
-  padding: 0px;
-  padding-inline: 1rem;
-  padding-top: 0.1rem;
+  padding-inline: 0.7rem;
+  padding-top: 0.5rem;
   font-family: "digital-clock-font";
 }
 
@@ -59,11 +66,11 @@ div.input-panel input:focus {
 }
 
 div.body-panel {
+  height: 30rem;
   gap: 1rem;
   padding-inline: 0.5rem;
   border-radius: 0rem 0rem 1rem 1rem;
   transform: skewX(-7.5deg);
-  /* box-shadow: 0.4rem 0.4rem 0rem 0.3rem black; */
 }
 
 div.button {
@@ -75,10 +82,6 @@ div.button {
   height: 3.5rem;
   box-shadow: 0.2rem 0.4rem 0rem 0rem black;
   cursor: pointer;
-}
-
-div.button#backspace {
-  width: 17rem;
 }
 
 div.button:active {
@@ -105,6 +108,11 @@ div.button:is(#open-bracket, #close-bracket) div {
   margin-top: -0.4rem;
 }
 
+div.button#dot div {
+  font-size: 7rem;
+  margin-top: -5rem;
+}
+
 div.button:not(
     #seven,
     #eight,
@@ -119,7 +127,8 @@ div.button:not(
     #backspace,
     #ac,
     #open-bracket,
-    #close-bracket
+    #close-bracket,
+    #dot
   )
   div {
   margin-top: -0.85rem;
@@ -148,20 +157,71 @@ div.body-panel-box-shadow1 {
   background-color: black;
   border-radius: 0rem 0rem 1rem 1rem;
   position: absolute;
-  top: 82%;
-  left: 47%;
+  top: 102%;
+  left: 46%;
   transform: translate(-50%, -50%) skewX(7.5deg);
   z-index: -1;
 }
 
 div.body-panel-box-shadow2 {
   width: 3.5rem;
-  height: 26.5rem;
+  height: 32.5rem;
   background-color: black;
-  border-radius: 0rem 0rem 1rem 0rem;
+  border-radius: 0rem 0.5rem 1rem 0rem;
   position: absolute;
-  top: 58.1%;
-  left: 98.61%;
+  top: 62.5%;
+  left: 99%;
   transform: translate(-50%, -50%) skewX(-7.5deg);
   z-index: -1;
+}
+
+@media (max-width: 479px) {
+  div.calculator {
+    left: 48.5%;
+  }
+
+  div.calculator-body {
+    width: 26rem;
+  }
+
+  div.input-panel {
+    width: 26rem;
+    margin-left: 1.6rem;
+  }
+
+  div.input-panel input {
+    padding-inline: 1.1rem;
+  }
+
+  div.input-panel-box-shadow1 {
+    width: 2.5rem;
+    height: 6.7rem;
+    border-radius: 0.55rem 1rem 0rem 0rem;
+    top: 11.55%;
+    left: 105.5%;
+  }
+
+  div.body-panel {
+    gap: 0.8rem;
+    height: 25rem;
+    padding-inline: 0.25rem;
+  }
+
+  div.button {
+    width: 5.5rem;
+  }
+
+  div.body-panel-box-shadow1 {
+    width: 26rem;
+    height: 2.5rem;
+    top: 102.5%;
+    left: 45%;
+  }
+
+  div.body-panel-box-shadow2 {
+    width: 2.5rem;
+    height: 26.6rem;
+    top: 64.5%;
+    left: 99%;
+  }
 }

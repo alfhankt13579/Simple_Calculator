@@ -19,19 +19,12 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body class="bg-light">
-    <div
-      class="calculator d-flex flex-column justify-content-center align-items-center container"
-    >
-      <h1 class="mt-5 mb-4 h1">Calculator</h1>
+  <body>
+    <div class="d-flex flex-column align-items-center calculator">
+      <h1 class="mt-5 mb-5 h1 text-center">Calculator</h1>
       <div class="calculator-body">
         <div class="input-panel p-3 bg-dark border border-dark">
-          <input
-            type="text"
-            class="form-control"
-            id="result"
-            readonly
-          />
+          <input type="text" class="form-control" id="result" readonly />
         </div>
         <div class="input-panel-box-shadow1">&nbsp;</div>
         <div
@@ -151,6 +144,13 @@
             <div>&divide;</div>
           </div>
           <div
+            id="ac"
+            onclick="clearBox()"
+            class="button bg-danger rounded-2 border border-dark border-2"
+          >
+            <div>AC</div>
+          </div>
+          <div
             id="backspace"
             onclick="removelastitem()"
             class="button bg-danger rounded-2 border border-dark border-2"
@@ -158,12 +158,13 @@
             <div>&#x232b;</div>
           </div>
           <div
-            id="ac"
-            onclick="clearBox()"
+            id="dot"
+            onclick="displayNumber('.')"
             class="button bg-danger rounded-2 border border-dark border-2"
           >
-            <div>AC</div>
+            <div>.</div>
           </div>
+
           <div
             id="equal"
             onclick="evaluateExp()"
