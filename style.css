@@ -1,0 +1,167 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+@font-face {
+  font-family: "digital-clock-font";
+  src: url("./assets/fonts/digital-7.ttf");
+}
+
+div.calculator {
+  width: 40rem;
+  position: relative;
+}
+
+div.calculator h1 {
+  font-size: 3.5rem;
+}
+
+div.calculator-body {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+}
+
+div.input-panel {
+  border-radius: 1rem 1rem 0rem 0rem;
+  /* box-shadow: 0.4rem 0.4rem 0rem 0.3rem black; */
+  margin-left: 1.5rem;
+  width: 40rem;
+}
+
+div.input-panel-box-shadow1 {
+  width: 2rem;
+  height: 6.45rem;
+  background-color: black;
+  border-radius: 0rem 1rem 0rem 0rem;
+  position: absolute;
+  top: 25.2%;
+  left: 104.63%;
+  transform: translate(-50%, -50%) skew(0deg, 20deg);
+  z-index: -1;
+}
+
+div.input-panel input {
+  height: 4.5rem;
+  font-size: 5rem;
+  padding: 0px;
+  padding-inline: 1rem;
+  padding-top: 0.1rem;
+  font-family: "digital-clock-font";
+}
+
+div.input-panel input:focus {
+  box-shadow: none;
+  border: 1px solid transparent;
+}
+
+div.body-panel {
+  gap: 1rem;
+  padding-inline: 0.5rem;
+  border-radius: 0rem 0rem 1rem 1rem;
+  transform: skewX(-7.5deg);
+  /* box-shadow: 0.4rem 0.4rem 0rem 0.3rem black; */
+}
+
+div.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 8rem;
+  height: 3.5rem;
+  box-shadow: 0.2rem 0.4rem 0rem 0rem black;
+  cursor: pointer;
+}
+
+div.button#backspace {
+  width: 17rem;
+}
+
+div.button:active {
+  box-shadow: 0.01rem 0.02rem 0rem 0rem black;
+  transform: translate(0.2rem, 0.4rem);
+}
+
+div.button div {
+  font-size: 2.5rem;
+}
+
+div.button#backspace div {
+  font-size: 2.3rem;
+  margin-top: -0.3rem;
+}
+
+div.button#ac div {
+  font-size: 2.1rem;
+  margin-top: -0.2rem;
+}
+
+div.button:is(#open-bracket, #close-bracket) div {
+  font-size: 2.2rem;
+  margin-top: -0.4rem;
+}
+
+div.button:not(
+    #seven,
+    #eight,
+    #nine,
+    #four,
+    #five,
+    #six,
+    #one,
+    #two,
+    #three,
+    #zero,
+    #backspace,
+    #ac,
+    #open-bracket,
+    #close-bracket
+  )
+  div {
+  margin-top: -0.85rem;
+  font-size: 3.5rem;
+}
+
+div.button:is(
+    #seven,
+    #eight,
+    #nine,
+    #four,
+    #five,
+    #six,
+    #one,
+    #two,
+    #three,
+    #zero
+  )
+  div {
+  margin-top: -0.3rem;
+}
+
+div.body-panel-box-shadow1 {
+  width: 40rem;
+  height: 3.5rem;
+  background-color: black;
+  border-radius: 0rem 0rem 1rem 1rem;
+  position: absolute;
+  top: 82%;
+  left: 47%;
+  transform: translate(-50%, -50%) skewX(7.5deg);
+  z-index: -1;
+}
+
+div.body-panel-box-shadow2 {
+  width: 3.5rem;
+  height: 26.5rem;
+  background-color: black;
+  border-radius: 0rem 0rem 1rem 0rem;
+  position: absolute;
+  top: 58.1%;
+  left: 98.61%;
+  transform: translate(-50%, -50%) skewX(-7.5deg);
+  z-index: -1;
+}
